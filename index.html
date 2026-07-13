@@ -36,7 +36,9 @@
         }
 
         /* ===== TYPOGRAPHY ===== */
-        h1, h2, h3 {
+        h1,
+        h2,
+        h3 {
             font-weight: 700;
             letter-spacing: -0.02em;
         }
@@ -213,7 +215,7 @@
             display: none;
         }
 
-        /* ===== SKILLS / TECH STACK ANIMADO ===== */
+        /* ===== SKILLS / TECH STACK ===== */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -239,8 +241,12 @@
         }
 
         @keyframes skillGlow {
-            0% { transform: translate(0, 0) scale(1); }
-            100% { transform: translate(10%, 10%) scale(1.2); }
+            0% {
+                transform: translate(0, 0) scale(1);
+            }
+            100% {
+                transform: translate(10%, 10%) scale(1.2);
+            }
         }
 
         .skills-grid span {
@@ -281,24 +287,63 @@
         }
 
         @keyframes skillFloat {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-4px); }
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-4px);
+            }
         }
 
-        .skills-grid span:nth-child(1) { --i: 1; }
-        .skills-grid span:nth-child(2) { --i: 2; }
-        .skills-grid span:nth-child(3) { --i: 3; }
-        .skills-grid span:nth-child(4) { --i: 4; }
-        .skills-grid span:nth-child(5) { --i: 5; }
-        .skills-grid span:nth-child(6) { --i: 6; }
-        .skills-grid span:nth-child(7) { --i: 7; }
-        .skills-grid span:nth-child(8) { --i: 8; }
-        .skills-grid span:nth-child(9) { --i: 9; }
-        .skills-grid span:nth-child(10) { --i: 10; }
-        .skills-grid span:nth-child(11) { --i: 11; }
-        .skills-grid span:nth-child(12) { --i: 12; }
-        .skills-grid span:nth-child(13) { --i: 13; }
-        .skills-grid span:nth-child(14) { --i: 14; }
+        .skills-grid span:nth-child(1) {
+            --i: 1;
+        }
+        .skills-grid span:nth-child(2) {
+            --i: 2;
+        }
+        .skills-grid span:nth-child(3) {
+            --i: 3;
+        }
+        .skills-grid span:nth-child(4) {
+            --i: 4;
+        }
+        .skills-grid span:nth-child(5) {
+            --i: 5;
+        }
+        .skills-grid span:nth-child(6) {
+            --i: 6;
+        }
+        .skills-grid span:nth-child(7) {
+            --i: 7;
+        }
+        .skills-grid span:nth-child(8) {
+            --i: 8;
+        }
+        .skills-grid span:nth-child(9) {
+            --i: 9;
+        }
+        .skills-grid span:nth-child(10) {
+            --i: 10;
+        }
+        .skills-grid span:nth-child(11) {
+            --i: 11;
+        }
+        .skills-grid span:nth-child(12) {
+            --i: 12;
+        }
+        .skills-grid span:nth-child(13) {
+            --i: 13;
+        }
+        .skills-grid span:nth-child(14) {
+            --i: 14;
+        }
+        .skills-grid span:nth-child(15) {
+            --i: 15;
+        }
+        .skills-grid span:nth-child(16) {
+            --i: 16;
+        }
 
         /* ===== SERVICES ===== */
         .services-grid {
@@ -432,38 +477,80 @@
             border: 1px solid #edf2f7;
         }
 
-        .education-box div {
+        .education-box .edu-item {
             color: #1e293b;
+            font-size: 1rem;
         }
 
-        .education-box strong {
+        .education-box .edu-item strong {
+            color: #0b1b2f;
+            font-weight: 700;
+        }
+
+        .education-box .edu-item .edu-meta {
+            color: #64748b;
+            font-weight: 400;
+        }
+
+        /* ===== CERTIFICATIONS ===== */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .cert-item {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            background: #f8fafc;
+            padding: 0.8rem 1.2rem;
+            border-radius: 1rem;
+            border: 1px solid #edf2f7;
+            transition: 0.2s;
+            text-decoration: none;
+            color: #1a2634;
+        }
+
+        .cert-item:hover {
+            border-color: #2563eb;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.08);
+        }
+
+        .cert-item i {
+            font-size: 1.5rem;
+            color: #2563eb;
+            min-width: 2rem;
+            text-align: center;
+        }
+
+        .cert-item .cert-info {
+            flex: 1;
+        }
+
+        .cert-item .cert-name {
+            font-weight: 600;
+            font-size: 0.95rem;
             color: #0b1b2f;
         }
 
-        .education-box .cert-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: #2563eb;
-            text-decoration: none;
-            font-weight: 600;
-            border-bottom: 2px solid transparent;
-            transition: 0.15s;
-        }
-
-        .education-box .cert-link:hover {
-            border-bottom-color: #2563eb;
-        }
-
-        .education-box .cert-list {
+        .cert-item .cert-meta {
+            font-size: 0.8rem;
+            color: #64748b;
             display: flex;
             flex-wrap: wrap;
-            align-items: center;
-            gap: 0.3rem 0.6rem;
+            gap: 0.5rem;
         }
 
-        .education-box .cert-list .cert-separator {
-            color: #94a3b8;
+        .cert-item .cert-meta .badge {
+            background: #eef2ff;
+            color: #1e3a8a;
+            padding: 0.1rem 0.6rem;
+            border-radius: 30px;
+            font-size: 0.65rem;
+            font-weight: 600;
         }
 
         /* ===== PROJECT CARDS ===== */
@@ -509,12 +596,12 @@
             background-image: url('https://placehold.co/600x400/1e293b/ffffff?text=TareaSync');
         }
 
-        .project-img-mern {
-            background-image: url('https://placehold.co/600x400/2563eb/ffffff?text=MERN+CRUD');
+        .project-img-seguro {
+            background-image: url('https://placehold.co/600x400/0f172a/ffffff?text=Seguro+Vehicular');
         }
 
         .project-img-ecommerce {
-            background-image: url('https://placehold.co/600x400/0f172a/ffffff?text=E-Commerce');
+            background-image: url('https://placehold.co/600x400/2563eb/ffffff?text=E-Commerce');
         }
 
         .project-img .placeholder-icon {
@@ -625,8 +712,14 @@
         }
 
         @keyframes modalIn {
-            0% { opacity: 0; transform: scale(0.95) translateY(20px); }
-            100% { opacity: 1; transform: scale(1) translateY(0); }
+            0% {
+                opacity: 0;
+                transform: scale(0.95) translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
         }
 
         .modal-close {
@@ -692,15 +785,6 @@
             margin-bottom: 0.8rem;
         }
 
-        .modal-content .modal-body-content ul {
-            padding-left: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .modal-content .modal-body-content ul li {
-            margin-bottom: 0.3rem;
-        }
-
         .modal-content .modal-body-content .feature-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -721,22 +805,33 @@
         .modal-content .modal-body-content .feature-grid span i {
             color: #2563eb;
             width: 1.2rem;
+            font-size: 1rem;
         }
 
-        .modal-content .modal-body-content .tech-stack-modal {
+        .modal-content .modal-body-content .modal-tech-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
             margin: 0.8rem 0;
         }
 
-        .modal-content .modal-body-content .tech-stack-modal span {
+        .modal-content .modal-body-content .modal-tech-tags span {
             background: #eef2ff;
             color: #1e3a8a;
             padding: 0.2rem 1rem;
             border-radius: 30px;
             font-size: 0.75rem;
             font-weight: 600;
+        }
+
+        .modal-content .modal-body-content .repo-link {
+            color: #2563eb;
+            text-decoration: none;
+            border-bottom: 1px solid #2563eb;
+        }
+
+        .modal-content .modal-body-content .repo-link:hover {
+            border-bottom-width: 2px;
         }
 
         /* ===== FOOTER ===== */
@@ -866,12 +961,11 @@
                 grid-template-columns: 1fr;
                 padding: 0.8rem 1rem;
             }
-            .education-box .cert-list {
-                flex-direction: column;
-                align-items: flex-start;
+            .cert-grid {
+                grid-template-columns: 1fr;
             }
-            .education-box .cert-list .cert-separator {
-                display: none;
+            .education-box .edu-item {
+                font-size: 0.95rem;
             }
         }
 
@@ -903,9 +997,9 @@
             <div class="hero-top">
                 <div>
                     <h1>Jorge <span class="highlight">Fernández</span></h1>
-                    <div class="hero-sub">Full Stack Developer · Systems Analyst</div>
+                    <div class="hero-sub" data-es="Full Stack Developer · Systems Analyst" data-en="Full Stack Developer · Systems Analyst">Full Stack Developer · Systems Analyst</div>
                     <div class="hero-badge">
-                        <i class="fas fa-code"></i> Full Stack · Frontend + Backend
+                        <i class="fas fa-code"></i> <span data-es="Full Stack · Frontend + Backend" data-en="Full Stack · Frontend + Backend">Full Stack · Frontend + Backend</span>
                     </div>
                 </div>
             </div>
@@ -916,7 +1010,7 @@
                 <a href="mailto:jorgesfb29@gmail.com"><i class="fas fa-envelope"></i> jorgesfb29@gmail.com</a>
             </div>
             <div class="hero-address">
-                <i class="fas fa-map-pin"></i> Av. Monroe 4012, Buenos Aires, Argentina
+                <i class="fas fa-map-pin"></i> <span data-es="CABA, Buenos Aires, Argentina" data-en="CABA, Buenos Aires, Argentina">CABA, Buenos Aires, Argentina</span>
             </div>
         </header>
 
@@ -938,7 +1032,7 @@
 
         <!-- ===== SKILLS / TECH STACK ===== -->
         <section class="section">
-            <h2><i class="fas fa-code"></i> Tech Stack</h2>
+            <h2><i class="fas fa-code"></i> <span data-es="Tech Stack" data-en="Tech Stack">Tech Stack</span></h2>
             <div class="skills-grid">
                 <span><i class="fab fa-java"></i> Java</span>
                 <span><i class="fas fa-code"></i> C#</span>
@@ -954,54 +1048,56 @@
                 <span><i class="fab fa-linux"></i> Linux</span>
                 <span><i class="fas fa-palette"></i> Bootstrap / Bulma</span>
                 <span><i class="fas fa-tasks"></i> Scrum / Kanban</span>
+                <span><i class="fab fa-python"></i> Python</span>
+                <span><i class="fas fa-cogs"></i> Ansible</span>
             </div>
         </section>
 
         <!-- ===== SERVICES ===== -->
         <section class="section">
-            <h2><i class="fas fa-cogs"></i> Servicios</h2>
+            <h2><i class="fas fa-cogs"></i> <span data-es="Servicios" data-en="Services">Servicios</span></h2>
             <div class="services-grid">
                 <div class="service-item">
                     <i class="fas fa-laptop-code"></i>
-                    <h4>Desarrollo Web</h4>
-                    <p>Aplicaciones web modernas, responsivas y escalables con las últimas tecnologías.</p>
+                    <h4 data-es="Desarrollo Web" data-en="Web Development">Desarrollo Web</h4>
+                    <p data-es="Aplicaciones web modernas, responsivas y escalables con las últimas tecnologías." data-en="Modern, responsive and scalable web applications with the latest technologies.">Aplicaciones web modernas, responsivas y escalables con las últimas tecnologías.</p>
                 </div>
                 <div class="service-item">
                     <i class="fas fa-server"></i>
-                    <h4>Backend & APIs</h4>
-                    <p>Arquitecturas robustas, APIs RESTful y microservicios con Node.js, Java y más.</p>
+                    <h4 data-es="Backend & APIs" data-en="Backend & APIs">Backend & APIs</h4>
+                    <p data-es="Arquitecturas robustas, APIs RESTful y microservicios con Node.js, Java y más." data-en="Robust architectures, RESTful APIs and microservices with Node.js, Java and more.">Arquitecturas robustas, APIs RESTful y microservicios con Node.js, Java y más.</p>
                 </div>
                 <div class="service-item">
                     <i class="fas fa-database"></i>
-                    <h4>Gestión de Datos</h4>
-                    <p>Diseño y optimización de bases de datos SQL y NoSQL para alto rendimiento.</p>
+                    <h4 data-es="Gestión de Datos" data-en="Data Management">Gestión de Datos</h4>
+                    <p data-es="Diseño y optimización de bases de datos SQL y NoSQL para alto rendimiento." data-en="Design and optimization of SQL and NoSQL databases for high performance.">Diseño y optimización de bases de datos SQL y NoSQL para alto rendimiento.</p>
                 </div>
                 <div class="service-item">
                     <i class="fas fa-rocket"></i>
-                    <h4>Consultoría IT</h4>
-                    <p>Asesoramiento en arquitectura, automatización y mejores prácticas de desarrollo.</p>
+                    <h4 data-es="Consultoría IT" data-en="IT Consulting">Consultoría IT</h4>
+                    <p data-es="Asesoramiento en arquitectura, automatización y mejores prácticas de desarrollo." data-en="Consulting in architecture, automation and development best practices.">Asesoramiento en arquitectura, automatización y mejores prácticas de desarrollo.</p>
                 </div>
             </div>
         </section>
 
         <!-- ===== EXPERIENCE ===== -->
         <section class="section">
-            <h2><i class="fas fa-briefcase"></i> Experience</h2>
+            <h2><i class="fas fa-briefcase"></i> <span data-es="Experience" data-en="Experience">Experience</span></h2>
             <div class="exp-item">
                 <div class="exp-header">
                     <h3>IT Support · Portfolio Investment</h3>
-                    <span class="date">Sep 2025 – Present</span>
+                    <span class="date">Sep 2025 – <span data-es="Presente" data-en="Present">Presente</span></span>
                 </div>
                 <div class="exp-desc">
                     <ul>
-                        <li>Administration of Linux servers and virtualized environments with Proxmox.</li>
-                        <li>Automation of operational tasks using Python scripts (monitoring, backups, reporting).</li>
-                        <li>Support and optimization of MySQL and MongoDB databases.</li>
-                        <li>Incident management and IT infrastructure maintenance.</li>
-                        <li>Internal development: Implementation of a productive task system with a modern frontend (list, Kanban, and calendar views), Node.js backend, and MongoDB database. Currently in use by the team.</li>
+                        <li data-es="Administración de servidores Linux y entornos virtualizados con Proxmox." data-en="Administration of Linux servers and virtualized environments with Proxmox.">Administración de servidores Linux y entornos virtualizados con Proxmox.</li>
+                        <li data-es="Automatización de tareas operativas mediante scripts en Python (monitoreo, respaldos, reportes)." data-en="Automation of operational tasks using Python scripts (monitoring, backups, reporting).">Automatización de tareas operativas mediante scripts en Python (monitoreo, respaldos, reportes).</li>
+                        <li data-es="Soporte y optimización de bases de datos MySQL y MongoDB." data-en="Support and optimization of MySQL and MongoDB databases.">Soporte y optimización de bases de datos MySQL y MongoDB.</li>
+                        <li data-es="Gestión de incidencias y mantenimiento de infraestructura IT." data-en="Incident management and IT infrastructure maintenance.">Gestión de incidencias y mantenimiento de infraestructura IT.</li>
+                        <li data-es="Desarrollo interno: Implementación de un sistema de tareas productivo con frontend moderno (vistas: lista, Kanban y calendario), backend en Node.js y base de datos MongoDB. Actualmente en uso por el equipo." data-en="Internal development: Implementation of a productive task system with a modern frontend (list, Kanban and calendar views), Node.js backend and MongoDB database. Currently in use by the team.">Desarrollo interno: Implementación de un sistema de tareas productivo con frontend moderno (vistas: lista, Kanban y calendario), backend en Node.js y base de datos MongoDB. Actualmente en uso por el equipo.</li>
                     </ul>
                     <div class="tech-tags">
-                        <span>Linux</span><span>Proxmox</span><span>Python</span><span>Node.js</span><span>MongoDB</span>
+                        <span>Linux</span><span>Proxmox</span><span>Python</span><span>Ansible</span><span>Node.js</span><span>MongoDB</span>
                     </div>
                 </div>
             </div>
@@ -1009,30 +1105,109 @@
 
         <!-- ===== EDUCATION ===== -->
         <section class="section">
-            <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+            <h2><i class="fas fa-graduation-cap"></i> <span data-es="Education" data-en="Education">Education</span></h2>
             <div class="education-box">
-                <div><strong>Professional Full-Stack Developer</strong> — UTN (Arg) · 2025</div>
-                <div><strong>Systems Analysis</strong> — ORT (Arg) · 50%</div>
-                <div>
-                    <strong>Certifications:</strong>
-                    <div class="cert-list">
-                        <a href="https://drive.google.com/file/d/1o36sXga8S98vdVv28yqdiA8AySWcTnoC/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="cert-link">
-                            <i class="fas fa-certificate"></i> Python
-                        </a>
-                        <span class="cert-separator">,</span>
-                        <span>Databases</span>
-                        <span class="cert-separator">,</span>
-                        <a href="https://politecnicodecolombia.edu.co/contable/app/certificados/pages/certificado.php?Id=wmgrkRa6XBMvZpGjeJzK" target="_blank" rel="noopener noreferrer" class="cert-link">
-                            <i class="fas fa-certificate"></i> Java Programming
-                        </a>
-                    </div>
+                <div class="edu-item">
+                    <strong>Professional Full-Stack Developer</strong> <span class="edu-meta">— UTN (Arg) · 2025</span>
                 </div>
+                <div class="edu-item">
+                    <strong>Systems Analysis</strong> <span class="edu-meta">— ORT (Arg) · 50%</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CERTIFICATIONS ===== -->
+        <section class="section">
+            <h2><i class="fas fa-certificate"></i> <span data-es="Certificaciones" data-en="Certifications">Certificaciones</span></h2>
+            <div class="cert-grid">
+                <a href="https://validator.centrodeelearning.com/validator/bd92d852-2d12-4756-93f6-6caa075293e6" target="_blank" rel="noopener noreferrer" class="cert-item">
+                    <i class="fas fa-award"></i>
+                    <div class="cert-info">
+                        <div class="cert-name">Professional Full-Stack Developer</div>
+                        <div class="cert-meta">
+                            <span>UTN · 2025</span>
+                            <span class="badge">195 hs</span>
+                            <span class="badge">Blockchain</span>
+                        </div>
+                    </div>
+                    <i class="fas fa-external-link-alt" style="font-size:0.8rem; color:#94a3b8;"></i>
+                </a>
+                <a href="https://validator.centrodeelearning.com/validator/4f8c5abd-8045-46d5-9138-3c4eb12b18ad" target="_blank" rel="noopener noreferrer" class="cert-item">
+                    <i class="fas fa-database"></i>
+                    <div class="cert-info">
+                        <div class="cert-name">Bases de Datos</div>
+                        <div class="cert-meta">
+                            <span>UTN · 2025</span>
+                            <span class="badge">96 hs</span>
+                            <span class="badge">Excelente</span>
+                        </div>
+                    </div>
+                    <i class="fas fa-external-link-alt" style="font-size:0.8rem; color:#94a3b8;"></i>
+                </a>
+                <a href="https://validator.centrodeelearning.com/validator/bd875d48-9186-4635-ac5a-836fb234d6fa" target="_blank" rel="noopener noreferrer" class="cert-item">
+                    <i class="fab fa-node-js"></i>
+                    <div class="cert-info">
+                        <div class="cert-name">Desarrollo con NodeJS</div>
+                        <div class="cert-meta">
+                            <span>UTN · 2025</span>
+                            <span class="badge">45 hs</span>
+                            <span class="badge">Excelente</span>
+                        </div>
+                    </div>
+                    <i class="fas fa-external-link-alt" style="font-size:0.8rem; color:#94a3b8;"></i>
+                </a>
+                <a href="https://validator.centrodeelearning.com/validator/4ba9cf10-ed2b-4c66-b137-50c434a423e9" target="_blank" rel="noopener noreferrer" class="cert-item">
+                    <i class="fab fa-react"></i>
+                    <div class="cert-info">
+                        <div class="cert-name">Desarrollo en React JS</div>
+                        <div class="cert-meta">
+                            <span>UTN · 2025</span>
+                            <span class="badge">105 hs</span>
+                            <span class="badge">Excelente</span>
+                        </div>
+                    </div>
+                    <i class="fas fa-external-link-alt" style="font-size:0.8rem; color:#94a3b8;"></i>
+                </a>
+                <a href="https://validator.centrodeelearning.com/validator/b5e6fa81-ccdf-479f-84a7-abe643b0682f" target="_blank" rel="noopener noreferrer" class="cert-item">
+                    <i class="fab fa-angular"></i>
+                    <div class="cert-info">
+                        <div class="cert-name">Desarrollo con Angular</div>
+                        <div class="cert-meta">
+                            <span>UTN · 2025</span>
+                            <span class="badge">45 hs</span>
+                            <span class="badge">Excelente</span>
+                        </div>
+                    </div>
+                    <i class="fas fa-external-link-alt" style="font-size:0.8rem; color:#94a3b8;"></i>
+                </a>
+                <a href="https://politecnicodecolombia.edu.co/contable/app/certificados/pages/certificado.php?Id=wmgrkRa6XBMvZpGjeJzK" target="_blank" rel="noopener noreferrer" class="cert-item">
+                    <i class="fab fa-java"></i>
+                    <div class="cert-info">
+                        <div class="cert-name">Java Programming</div>
+                        <div class="cert-meta">
+                            <span>2025</span>
+                            <span class="badge">Politécnico</span>
+                        </div>
+                    </div>
+                    <i class="fas fa-external-link-alt" style="font-size:0.8rem; color:#94a3b8;"></i>
+                </a>
+                <a href="https://drive.google.com/file/d/1o36sXga8S98vdVv28yqdiA8AySWcTnoC/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="cert-item">
+                    <i class="fab fa-python"></i>
+                    <div class="cert-info">
+                        <div class="cert-name">Python</div>
+                        <div class="cert-meta">
+                            <span>8 horas</span>
+                            <span class="badge">2025</span>
+                        </div>
+                    </div>
+                    <i class="fas fa-external-link-alt" style="font-size:0.8rem; color:#94a3b8;"></i>
+                </a>
             </div>
         </section>
 
         <!-- ===== PROJECTS ===== -->
         <section class="section">
-            <h2><i class="fas fa-folder-open"></i> Featured Projects</h2>
+            <h2><i class="fas fa-folder-open"></i> <span data-es="Featured Projects" data-en="Featured Projects">Featured Projects</span></h2>
 
             <div class="project-grid">
 
@@ -1043,31 +1218,31 @@
                     </div>
                     <div class="project-body">
                         <h4>TareaSync</h4>
-                        <p class="short-desc">Gestor de tareas full-stack con seguimiento de comentarios, archivos adjuntos, notificaciones por correo y control de lectura.</p>
+                        <p class="short-desc" data-es="Gestor de tareas full-stack con seguimiento de comentarios, archivos adjuntos, notificaciones por correo y control de lectura." data-en="Full-stack task manager with comment tracking, file attachments, email notifications and read control.">Gestor de tareas full-stack con seguimiento de comentarios, archivos adjuntos, notificaciones por correo y control de lectura.</p>
                         <div class="tech-tags">
                             <span>React</span><span>Node.js</span><span>MongoDB</span><span>Firebase</span>
                         </div>
                         <div class="project-actions">
-                            <a href="https://tareasync.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-primary"><i class="fas fa-external-link-alt"></i> Ver proyecto</a>
-                            <button class="btn-details" data-project="tareasync"><i class="fas fa-info-circle"></i> Detalles</button>
+                            <a href="https://tareasync.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-primary"><i class="fas fa-external-link-alt"></i> <span data-es="Ver proyecto" data-en="View project">Ver proyecto</span></a>
+                            <button class="btn-details" data-project="tareasync"><i class="fas fa-info-circle"></i> <span data-es="Detalles" data-en="Details">Detalles</span></button>
                         </div>
                     </div>
                 </div>
 
-                <!-- ===== MERN CRUD ===== -->
+                <!-- ===== Seguro Vehicular Premium ===== -->
                 <div class="project-card">
-                    <div class="project-img project-img-mern">
-                        <i class="fas fa-database placeholder-icon"></i>
+                    <div class="project-img project-img-seguro">
+                        <i class="fas fa-car placeholder-icon"></i>
                     </div>
                     <div class="project-body">
-                        <h4>MERN CRUD System</h4>
-                        <p class="short-desc">Full CRUD application with React, Node.js, Express, and MongoDB. Features user authentication and business logic focused on customer experience.</p>
+                        <h4>Seguro Vehicular Premium</h4>
+                        <p class="short-desc" data-es="Plataforma digital para la gestión de seguros vehiculares, con catálogo de coberturas, asistencia en tiempo real y centro de siniestros digitales." data-en="Digital platform for vehicle insurance management, with coverage catalog, real-time assistance and digital claims center.">Plataforma digital para la gestión de seguros vehiculares, con catálogo de coberturas, asistencia en tiempo real y centro de siniestros digitales.</p>
                         <div class="tech-tags">
-                            <span>React</span><span>Node.js</span><span>Express</span><span>MongoDB</span>
+                            <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Font Awesome</span>
                         </div>
                         <div class="project-actions">
-                            <a href="#" target="_blank" rel="noopener noreferrer" class="btn-primary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                            <button class="btn-details" data-project="mern"><i class="fas fa-info-circle"></i> Detalles</button>
+                            <a href="https://segurovehicularprimium.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn-primary"><i class="fas fa-external-link-alt"></i> <span data-es="Ver proyecto" data-en="View project">Ver proyecto</span></a>
+                            <button class="btn-details" data-project="seguro"><i class="fas fa-info-circle"></i> <span data-es="Detalles" data-en="Details">Detalles</span></button>
                         </div>
                     </div>
                 </div>
@@ -1079,13 +1254,13 @@
                     </div>
                     <div class="project-body">
                         <h4>E-Commerce · Actitud Thrasher</h4>
-                        <p class="short-desc">Online clothing store developed with Angular, featuring protected routes, role management, admin dashboard, and Firebase integration.</p>
+                        <p class="short-desc" data-es="Tienda online de ropa desarrollada con Angular, con rutas protegidas, gestión de roles, panel de administración e integración con Firebase." data-en="Online clothing store developed with Angular, featuring protected routes, role management, admin dashboard and Firebase integration.">Tienda online de ropa desarrollada con Angular, con rutas protegidas, gestión de roles, panel de administración e integración con Firebase.</p>
                         <div class="tech-tags">
                             <span>Angular</span><span>TypeScript</span><span>Firebase</span>
                         </div>
                         <div class="project-actions">
-                            <a href="#" target="_blank" rel="noopener noreferrer" class="btn-primary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                            <button class="btn-details" data-project="ecommerce"><i class="fas fa-info-circle"></i> Detalles</button>
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="btn-primary"><i class="fas fa-external-link-alt"></i> <span data-es="Live Demo" data-en="Live Demo">Live Demo</span></a>
+                            <button class="btn-details" data-project="ecommerce"><i class="fas fa-info-circle"></i> <span data-es="Detalles" data-en="Details">Detalles</span></button>
                         </div>
                     </div>
                 </div>
@@ -1104,7 +1279,7 @@
         <!-- ===== FOOTER ===== -->
         <footer class="footer">
             <div class="footer-left">
-                <span class="copyright">&copy; 2026 <strong>Jorge Fernández</strong> · Full Stack Developer</span>
+                <span class="copyright">&copy; 2026 <strong>Jorge Fernández</strong> · <span data-es="Full Stack Developer" data-en="Full Stack Developer">Full Stack Developer</span></span>
             </div>
             <div class="footer-social">
                 <a href="https://github.com/jorgeF1990" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
@@ -1129,8 +1304,231 @@
             const coverEn = document.getElementById('coverEn');
             const btnEs = document.getElementById('btnEs');
             const btnEn = document.getElementById('btnEn');
+            let currentLang = 'es';
 
+            // ===== ICONOS PARA CARACTERÍSTICAS =====
+            const featureIcons = {
+                // TareaSync (español)
+                'CRUD de tareas': 'fa-solid fa-list-check',
+                'Asignación múltiple': 'fa-solid fa-users',
+                'Historial de actividad': 'fa-solid fa-clock-rotate-left',
+                'Adjuntar imágenes': 'fa-solid fa-image',
+                'Notificaciones por correo': 'fa-solid fa-envelope',
+                'Recordatorios automáticos': 'fa-solid fa-bell',
+                'Control de lectura': 'fa-solid fa-eye',
+                'Autenticación JWT': 'fa-solid fa-shield-halved',
+                'Recurrencia de tareas': 'fa-solid fa-arrows-rotate',
+                'Vistas: Lista, Kanban, Calendario': 'fa-solid fa-table-columns',
+                'Dashboard con KPIs': 'fa-solid fa-chart-bar',
+                'Drag & Drop en Kanban': 'fa-solid fa-arrows-up-down',
+                'Modo oscuro / claro': 'fa-solid fa-moon',
+                'Silenciar notificaciones': 'fa-solid fa-volume-xmark',
+                // TareaSync (inglés)
+                'Task CRUD': 'fa-solid fa-list-check',
+                'Multiple assignment': 'fa-solid fa-users',
+                'Activity history': 'fa-solid fa-clock-rotate-left',
+                'Attach images': 'fa-solid fa-image',
+                'Email notifications': 'fa-solid fa-envelope',
+                'Automatic reminders': 'fa-solid fa-bell',
+                'Read control': 'fa-solid fa-eye',
+                'JWT authentication': 'fa-solid fa-shield-halved',
+                'Task recurrence': 'fa-solid fa-arrows-rotate',
+                'Views: List, Kanban, Calendar': 'fa-solid fa-table-columns',
+                'Dashboard with KPIs': 'fa-solid fa-chart-bar',
+                'Drag & Drop in Kanban': 'fa-solid fa-arrows-up-down',
+                'Dark / Light mode': 'fa-solid fa-moon',
+                'Mute notifications': 'fa-solid fa-volume-xmark',
+                // Seguro Vehicular (español)
+                'Catálogo de Servicios': 'fa-solid fa-list',
+                'Búsqueda en Tiempo Real': 'fa-solid fa-magnifying-glass',
+                'Centro de Siniestros Digitales': 'fa-solid fa-file-lines',
+                'Asistencia Vial 24/7': 'fa-solid fa-phone',
+                'Descarga de Pólizas': 'fa-solid fa-file-pdf',
+                'Código QR para App Móvil': 'fa-solid fa-qrcode',
+                'Diseño Responsive': 'fa-solid fa-mobile-screen',
+                'Interfaz Profesional': 'fa-solid fa-building',
+                // Seguro Vehicular (inglés)
+                'Services Catalog': 'fa-solid fa-list',
+                'Real-time Search': 'fa-solid fa-magnifying-glass',
+                'Digital Claims Center': 'fa-solid fa-file-lines',
+                '24/7 Roadside Assistance': 'fa-solid fa-phone',
+                'Policy Download': 'fa-solid fa-file-pdf',
+                'QR Code for Mobile App': 'fa-solid fa-qrcode',
+                'Responsive Design': 'fa-solid fa-mobile-screen',
+                'Professional Interface': 'fa-solid fa-building',
+                // E-Commerce (español)
+                'Rutas protegidas con Angular Router': 'fa-solid fa-shield-halved',
+                'Gestión de roles (admin, usuario)': 'fa-solid fa-user-gear',
+                'Dashboard administrativo': 'fa-solid fa-chart-line',
+                'Conexión a Firebase para autenticación y base de datos': 'fa-solid fa-fire',
+                'Enfoque en experiencia de usuario y arquitectura escalable': 'fa-solid fa-cubes',
+                // E-Commerce (inglés)
+                'Protected routes with Angular Router': 'fa-solid fa-shield-halved',
+                'Role management (admin, user)': 'fa-solid fa-user-gear',
+                'Admin dashboard': 'fa-solid fa-chart-line',
+                'Firebase connection for authentication and database': 'fa-solid fa-fire',
+                'Focus on user experience and scalable architecture': 'fa-solid fa-cubes'
+            };
+
+            // ===== PROJECT DATA (bilingüe) =====
+            const projectData = {
+                tareasync: {
+                    es: {
+                        title: 'TareaSync - Gestor de Tareas',
+                        tag: 'Full Stack',
+                        meta: 'Repositorio: github.com/jorgeF1990/gestor_de_tarea',
+                        description: 'TareaSync es una aplicación web full-stack para la gestión de tareas entre usuarios y administradores. Permite crear, asignar y hacer seguimiento de tareas con notificaciones por correo en tiempo real.',
+                        features: [
+                            'CRUD de tareas', 'Asignación múltiple', 'Historial de actividad',
+                            'Adjuntar imágenes', 'Notificaciones por correo', 'Recordatorios automáticos',
+                            'Control de lectura', 'Autenticación JWT', 'Recurrencia de tareas',
+                            'Vistas: Lista, Kanban, Calendario', 'Dashboard con KPIs',
+                            'Drag & Drop en Kanban', 'Modo oscuro / claro', 'Silenciar notificaciones'
+                        ],
+                        techs: ['React 18', 'Node.js', 'Express', 'MongoDB', 'Mongoose', 'Multer', 'Nodemailer', 'JWT',
+                            'node-cron', 'Vite', 'Axios', 'react-big-calendar', 'Lucide React', 'jwt-decode'
+                        ],
+                        repo: 'github.com/jorgeF1990/gestor_de_tarea'
+                    },
+                    en: {
+                        title: 'TareaSync - Task Manager',
+                        tag: 'Full Stack',
+                        meta: 'Repository: github.com/jorgeF1990/gestor_de_tarea',
+                        description: 'TareaSync is a full-stack web application for task management between users and administrators. It allows creating, assigning and tracking tasks with real-time email notifications.',
+                        features: [
+                            'Task CRUD', 'Multiple assignment', 'Activity history',
+                            'Attach images', 'Email notifications', 'Automatic reminders',
+                            'Read control', 'JWT authentication', 'Task recurrence',
+                            'Views: List, Kanban, Calendar', 'Dashboard with KPIs',
+                            'Drag & Drop in Kanban', 'Dark / Light mode', 'Mute notifications'
+                        ],
+                        techs: ['React 18', 'Node.js', 'Express', 'MongoDB', 'Mongoose', 'Multer', 'Nodemailer', 'JWT',
+                            'node-cron', 'Vite', 'Axios', 'react-big-calendar', 'Lucide React', 'jwt-decode'
+                        ],
+                        repo: 'github.com/jorgeF1990/gestor_de_tarea'
+                    }
+                },
+                seguro: {
+                    es: {
+                        title: 'Seguro Vehicular Premium',
+                        tag: 'Frontend',
+                        meta: 'Plataforma de gestión de seguros vehiculares',
+                        description: 'Seguro Vehicular Premium es una plataforma digital diseñada para ofrecer una experiencia completa en la gestión de seguros de automóviles. Permite a los usuarios explorar diferentes coberturas, acceder a asistencia vial, gestionar siniestros y descargar documentación importante de manera ágil y profesional.',
+                        features: [
+                            'Catálogo de Servicios', 'Búsqueda en Tiempo Real',
+                            'Centro de Siniestros Digitales', 'Asistencia Vial 24/7',
+                            'Descarga de Pólizas', 'Código QR para App Móvil',
+                            'Diseño Responsive', 'Interfaz Profesional'
+                        ],
+                        techs: ['HTML5', 'CSS3', 'JavaScript (ES6+)', 'Font Awesome 6', 'Google Fonts (Inter)'],
+                        repo: 'github.com/jorgeF1990/segurovehicularpremium'
+                    },
+                    en: {
+                        title: 'Premium Vehicle Insurance',
+                        tag: 'Frontend',
+                        meta: 'Vehicle insurance management platform',
+                        description: 'Premium Vehicle Insurance is a digital platform designed to offer a complete experience in managing car insurance. It allows users to explore different coverages, access roadside assistance, manage claims and download important documentation quickly and professionally.',
+                        features: [
+                            'Services Catalog', 'Real-time Search',
+                            'Digital Claims Center', '24/7 Roadside Assistance',
+                            'Policy Download', 'QR Code for Mobile App',
+                            'Responsive Design', 'Professional Interface'
+                        ],
+                        techs: ['HTML5', 'CSS3', 'JavaScript (ES6+)', 'Font Awesome 6', 'Google Fonts (Inter)'],
+                        repo: 'github.com/jorgeF1990/segurovehicularpremium'
+                    }
+                },
+                ecommerce: {
+                    es: {
+                        title: 'E-Commerce · Actitud Thrasher',
+                        tag: 'Angular',
+                        meta: 'Angular · TypeScript · Firebase',
+                        description: 'Tienda online de ropa desarrollada con Angular, diseñada para ofrecer una experiencia de compra fluida y moderna.',
+                        features: [
+                            'Rutas protegidas con Angular Router',
+                            'Gestión de roles (admin, usuario)',
+                            'Dashboard administrativo',
+                            'Conexión a Firebase para autenticación y base de datos',
+                            'Enfoque en experiencia de usuario y arquitectura escalable'
+                        ],
+                        techs: ['Angular', 'TypeScript', 'Firebase'],
+                        repo: ''
+                    },
+                    en: {
+                        title: 'E-Commerce · Actitud Thrasher',
+                        tag: 'Angular',
+                        meta: 'Angular · TypeScript · Firebase',
+                        description: 'Online clothing store developed with Angular, designed to offer a smooth and modern shopping experience.',
+                        features: [
+                            'Protected routes with Angular Router',
+                            'Role management (admin, user)',
+                            'Admin dashboard',
+                            'Firebase connection for authentication and database',
+                            'Focus on user experience and scalable architecture'
+                        ],
+                        techs: ['Angular', 'TypeScript', 'Firebase'],
+                        repo: ''
+                    }
+                }
+            };
+
+            // ===== MODAL LOGIC =====
+            const modalOverlay = document.getElementById('modalOverlay');
+            const modalBody = document.getElementById('modalBody');
+            const modalClose = document.getElementById('modalClose');
+
+            function renderModal(projectKey, lang) {
+                const data = projectData[projectKey][lang];
+                if (!data) return;
+
+                // Generar grid de características con iconos específicos
+                const featuresHtml = data.features.map(f => {
+                    const iconClass = featureIcons[f] || 'fa-solid fa-check-circle';
+                    return `<span><i class="${iconClass}"></i> ${f}</span>`;
+                }).join('');
+
+                // Generar tags de tecnologías
+                const techsHtml = data.techs.map(t =>
+                    `<span>${t}</span>`
+                ).join('');
+
+                // Generar enlace del repositorio (si existe)
+                let repoHtml = '';
+                if (data.repo) {
+                    repoHtml = `<p><strong>${lang === 'es' ? 'Repositorio:' : 'Repository:'}</strong> <a href="https://${data.repo}" target="_blank" class="repo-link">${data.repo}</a></p>`;
+                }
+
+                // Construir el HTML del modal
+                modalBody.innerHTML = `
+                    <span class="modal-tag">${data.tag}</span>
+                    <h2>${data.title}</h2>
+                    <div class="modal-meta"><i class="far fa-folder-open"></i> ${data.meta}</div>
+                    <div class="modal-body-content">
+                        <p>${data.description}</p>
+
+                        <h3>${lang === 'es' ? 'Características principales' : 'Main Features'}</h3>
+                        <div class="feature-grid">${featuresHtml}</div>
+
+                        <h3>${lang === 'es' ? 'Tecnologías utilizadas' : 'Technologies Used'}</h3>
+                        <div class="modal-tech-tags">${techsHtml}</div>
+
+                        ${repoHtml}
+                    </div>
+                `;
+
+                modalOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeModal() {
+                modalOverlay.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+
+            // ===== SET LANGUAGE =====
             function setLanguage(lang) {
+                currentLang = lang;
+
                 if (lang === 'en') {
                     coverEs.style.display = 'none';
                     coverEn.style.display = 'block';
@@ -1142,135 +1540,55 @@
                     btnEs.classList.add('active-lang');
                     btnEn.classList.remove('active-lang');
                 }
+
+                // Actualizar textos en la página
+                document.querySelectorAll('[data-es][data-en]').forEach(el => {
+                    if (lang === 'es') {
+                        el.textContent = el.getAttribute('data-es');
+                    } else {
+                        el.textContent = el.getAttribute('data-en');
+                    }
+                });
+
+                // Si el modal está abierto, actualizar su contenido
+                if (modalOverlay.classList.contains('active')) {
+                    const titleEl = modalBody.querySelector('h2');
+                    if (titleEl) {
+                        const currentTitle = titleEl.textContent;
+                        for (const key in projectData) {
+                            const esTitle = projectData[key].es.title;
+                            const enTitle = projectData[key].en.title;
+                            if (currentTitle === esTitle || currentTitle === enTitle) {
+                                renderModal(key, lang);
+                                break;
+                            }
+                        }
+                    }
+                }
             }
 
+            // ===== EVENTOS =====
             btnEs.addEventListener('click', function() { setLanguage('es'); });
             btnEn.addEventListener('click', function() { setLanguage('en'); });
+
+            // Idioma inicial
             setLanguage('es');
-
-            // ===== PROJECT DATA (para popup) =====
-            const projectData = {
-                tareasync: {
-                    title: 'TareaSync - Gestor de Tareas',
-                    tag: 'Full Stack',
-                    meta: 'Repositorio: github.com/jorgeF1990/gestor_de_tarea',
-                    content: `
-                        <p><strong>TareaSync</strong> es una aplicación web full-stack para la gestión de tareas entre usuarios y administradores. Permite crear, asignar y hacer seguimiento de tareas con notificaciones por correo en tiempo real.</p>
-
-                        <h3>Características principales</h3>
-                        <div class="feature-grid">
-                            <span><i class="fas fa-check-circle"></i> CRUD de tareas</span>
-                            <span><i class="fas fa-users"></i> Asignación múltiple</span>
-                            <span><i class="fas fa-history"></i> Historial de actividad</span>
-                            <span><i class="fas fa-image"></i> Adjuntar imágenes</span>
-                            <span><i class="fas fa-envelope"></i> Notificaciones por correo</span>
-                            <span><i class="fas fa-bell"></i> Recordatorios automáticos</span>
-                            <span><i class="fas fa-eye"></i> Control de lectura</span>
-                            <span><i class="fas fa-shield-alt"></i> Autenticación JWT</span>
-                            <span><i class="fas fa-sync"></i> Recurrencia de tareas</span>
-                            <span><i class="fas fa-columns"></i> Vistas: Lista, Kanban, Calendario</span>
-                            <span><i class="fas fa-chart-bar"></i> Dashboard con KPIs</span>
-                            <span><i class="fas fa-arrows-alt"></i> Drag & Drop en Kanban</span>
-                            <span><i class="fas fa-moon"></i> Modo oscuro / claro</span>
-                            <span><i class="fas fa-volume-mute"></i> Silenciar notificaciones</span>
-                        </div>
-
-                        <h3>Tecnologías utilizadas</h3>
-                        <div style="display:flex; flex-wrap:wrap; gap:0.5rem; margin:0.5rem 0 1rem 0;">
-                            <span style="background:#eef2ff; color:#1e3a8a; padding:0.2rem 1rem; border-radius:30px; font-size:0.75rem; font-weight:600;">React 18</span>
-                            <span style="background:#eef2ff; color:#1e3a8a; padding:0.2rem 1rem; border-radius:30px; font-size:0.75rem; font-weight:600;">Node.js</span>
-                            <span style="background:#eef2ff; color:#1e3a8a; padding:0.2rem 1rem; border-radius:30px; font-size:0.75rem; font-weight:600;">Express</span>
-                            <span style="background:#eef2ff; color:#1e3a8a; padding:0.2rem 1rem; border-radius:30px; font-size:0.75rem; font-weight:600;">MongoDB</span>
-                            <span style="background:#eef2ff; color:#1e3a8a; padding:0.2rem 1rem; border-radius:30px; font-size:0.75rem; font-weight:600;">Mongoose</span>
-                            <span style="background:#eef2ff; color:#1e3a8a; padding:0.2rem 1rem; border-radius:30px; font-size:0.75rem; font-weight:600;">Multer</span>
-                            <span style="background:#eef2ff; color:#1e3a8a; padding:0.2rem 1rem; border-radius:30px; font-size:0.75rem; font-weight:600;">Nodemailer</span>
-                            <span style="background:#eef2ff; color:#1e3a8a; padding:0.2rem 1rem; border-radius:30px; font-size:0.75rem; font-weight:600;">JWT</span>
-                            <span style="background:#eef2ff; color:#1e3a8a; padding:0.2rem 1rem; border-radius:30px; font-size:0.75rem; font-weight:600;">node-cron</span>
-                            <span style="background:#eef2ff; color:#1e3a8a; padding:0.2rem 1rem; border-radius:30px; font-size:0.75rem; font-weight:600;">Vite</span>
-                            <span style="background:#eef2ff; color:#1e3a8a; padding:0.2rem 1rem; border-radius:30px; font-size:0.75rem; font-weight:600;">Axios</span>
-                            <span style="background:#eef2ff; color:#1e3a8a; padding:0.2rem 1rem; border-radius:30px; font-size:0.75rem; font-weight:600;">react-big-calendar</span>
-                            <span style="background:#eef2ff; color:#1e3a8a; padding:0.2rem 1rem; border-radius:30px; font-size:0.75rem; font-weight:600;">Lucide React</span>
-                            <span style="background:#eef2ff; color:#1e3a8a; padding:0.2rem 1rem; border-radius:30px; font-size:0.75rem; font-weight:600;">jwt-decode</span>
-                        </div>
-
-                        <p><strong>Repositorio:</strong> <a href="https://github.com/jorgeF1990/gestor_de_tarea.git" target="_blank" style="color:#2563eb; text-decoration:none; border-bottom:1px solid #2563eb;">github.com/jorgeF1990/gestor_de_tarea</a></p>
-                    `
-                },
-                mern: {
-                    title: 'MERN CRUD System',
-                    tag: 'Full Stack',
-                    meta: 'React · Node.js · Express · MongoDB',
-                    content: `
-                        <p>Aplicación CRUD completa construida con el stack MERN (MongoDB, Express, React, Node.js). Incluye autenticación de usuarios con JWT y lógica de negocio enfocada en la experiencia del cliente.</p>
-                        <h3>Características</h3>
-                        <ul>
-                            <li>Operaciones CRUD completas</li>
-                            <li>Autenticación y autorización con JWT</li>
-                            <li>Interfaz responsiva con React y CSS moderno</li>
-                            <li>API RESTful con Express</li>
-                            <li>Persistencia de datos con MongoDB</li>
-                        </ul>
-                    `
-                },
-                ecommerce: {
-                    title: 'E-Commerce · Actitud Thrasher',
-                    tag: 'Angular',
-                    meta: 'Angular · TypeScript · Firebase',
-                    content: `
-                        <p>Tienda online de ropa desarrollada con Angular, diseñada para ofrecer una experiencia de compra fluida y moderna.</p>
-                        <h3>Características</h3>
-                        <ul>
-                            <li>Rutas protegidas con Angular Router</li>
-                            <li>Gestión de roles (admin, usuario)</li>
-                            <li>Dashboard administrativo</li>
-                            <li>Conexión a Firebase para autenticación y base de datos</li>
-                            <li>Enfoque en experiencia de usuario y arquitectura escalable</li>
-                        </ul>
-                    `
-                }
-            };
-
-            // ===== MODAL LOGIC =====
-            const modalOverlay = document.getElementById('modalOverlay');
-            const modalBody = document.getElementById('modalBody');
-            const modalClose = document.getElementById('modalClose');
-
-            function openModal(projectKey) {
-                const project = projectData[projectKey];
-                if (!project) return;
-
-                modalBody.innerHTML = `
-                    <span class="modal-tag">${project.tag}</span>
-                    <h2>${project.title}</h2>
-                    <div class="modal-meta"><i class="far fa-folder-open"></i> ${project.meta}</div>
-                    <div class="modal-body-content">${project.content}</div>
-                `;
-                modalOverlay.classList.add('active');
-                document.body.style.overflow = 'hidden';
-            }
-
-            function closeModal() {
-                modalOverlay.classList.remove('active');
-                document.body.style.overflow = 'auto';
-            }
 
             // Click en botones "Detalles"
             document.querySelectorAll('.btn-details').forEach(btn => {
                 btn.addEventListener('click', function() {
                     const projectKey = this.dataset.project;
-                    openModal(projectKey);
+                    renderModal(projectKey, currentLang);
                 });
             });
 
-            // Cerrar con botón
+            // Cerrar modal
             modalClose.addEventListener('click', closeModal);
 
-            // Cerrar con click fuera del contenido
             modalOverlay.addEventListener('click', function(e) {
                 if (e.target === this) closeModal();
             });
 
-            // Cerrar con tecla ESC
             document.addEventListener('keydown', function(e) {
                 if (e.key === 'Escape') closeModal();
             });
